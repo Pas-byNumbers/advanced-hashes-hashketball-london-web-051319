@@ -217,7 +217,7 @@ def big_shoe_rebounds
   end
 end
 
-def player_stats(name)
+def player_stats(name_req)
 players_home = game_hash[:home][:players]
 players_away = game_hash[:away][:players]
 
