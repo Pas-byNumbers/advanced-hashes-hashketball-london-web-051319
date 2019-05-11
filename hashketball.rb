@@ -118,23 +118,17 @@ def game_hash
 end
   
 def num_points_scored(name_req)
-  hash = game_hash
-  
-  hash.each do |location, attribute|
-    
-    attribute.each do |info, stat| 
-      
-      if stat.include?(name_req) 
-        
-          
-      game_hash[location][info][name_req][:points]
-        
-      end
-      
-    end
-  end
-  
-  
+players_home = game_hash[:home][:players]
+players_away = game_hash[:away][:players]
+
+if players_home.include?(name_req)
+return players_home[name_req][:points]
+elsif players_away.include?(name_req)
+return players_away[name_req][:points]
+else
+puts "It didn't work!"
+end 
+
 end
 
 def team_colors(team_name)
