@@ -218,18 +218,17 @@ def big_shoe_rebounds
 end
 
 def player_stats(name)
+players_home = game_hash[:home][:players]
+players_away = game_hash[:away][:players]
+
+if players_home.include?(name_req)
+return players_home[name_req]
+elsif players_away.include?(name_req)
+return players_away[name_req]
+else
+puts "It didn't work!"
+end  
   
-  game_hash.each do |location, team|
-    team.each do |, data|
-      if data_label == :players
-        data.each do |player_name, stats|
-          if player_name == name
-            data[:player_name]
-          end
-        end
-      end
-    end
-  end
   
 end
 
