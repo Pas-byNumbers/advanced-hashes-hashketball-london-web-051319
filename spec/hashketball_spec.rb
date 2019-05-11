@@ -37,6 +37,15 @@ describe 'hashketball' do
 
     it 'knows the shoe size of each player' do
       expect(shoe_size("Jeff Adrien")).to eq(18)
+      expect(shoe_size("Bismack Biyombo")).to eq(16)
+      expect(shoe_size("DeSagna Diop")).to eq(14)
+      expect(shoe_size("Ben Gordon")).to eq(15)
+      expect(shoe_size("Brendan Haywood")).to eq(15)
+      expect(shoe_size("Alan Anderson")).to eq(16)
+      expect(shoe_size("Reggie Evans")).to eq(14)
+      expect(shoe_size("Brook Lopez")).to eq(17)
+      expect(shoe_size("Mason Plumlee")).to eq(19)
+      expect(shoe_size("Jason Terry")).to eq(15)
       
     end
 
