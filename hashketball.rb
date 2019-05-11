@@ -123,11 +123,15 @@ players_away = game_hash[:away][:players]
 
 players_home.each do |name|
   if name == name_req
-    return name[:points]
+    return name_req[:points]
   else
     players_away.each do |name|
       if name = name_req
-        return name
+        return name_req[:points].to_int
+      end
+    end
+  end
+end
 
 end
 
