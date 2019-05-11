@@ -121,17 +121,13 @@ def num_points_scored(name_req)
 players_home = game_hash[:home][:players]
 players_away = game_hash[:away][:players]
 
-players_home.each do |name|
-  if name == name_req
-    return name_req[:points]
-  else
-    players_away.each do |name|
-      if name = name_req
-        return name_req[:points][:a.to_i]
-      end
-    end
-  end
-end
+if players_home.include?(name_req)
+return players_home[name_req][:points]
+elsif players_away.include?(name_req)
+return players_away[name_req][:points]
+else
+puts "It didn't work!"
+end 
 
 end
 
