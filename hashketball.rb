@@ -142,6 +142,7 @@ return players_away[name_req][:shoe]
 else
 puts "It didn't work!"
 end 
+end
 
 def team_colors(team_name)
   hash = game_hash
