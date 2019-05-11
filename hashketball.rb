@@ -131,6 +131,18 @@ end
 
 end
 
+def shoe_size(name_req)
+players_home = game_hash[:home][:players]
+players_away = game_hash[:away][:players]
+
+if players_home.include?(name_req)
+return players_home[name_req][:shoe]
+elsif players_away.include?(name_req)
+return players_away[name_req][:shoe]
+else
+puts "It didn't work!"
+end 
+
 def team_colors(team_name)
   hash = game_hash
   
