@@ -119,21 +119,21 @@ end
   
 def num_points_scored(name_req)
   hash = game_hash
-  answer = []
-  hash.map do |location, info|
+  
+  hash.map do |location, attribute|
     
-    info.map do |attribute, stat| 
+    attribute.map do |info, stat| 
       
       if stat.include?(name_req) 
         
           
-       answer << game_hash[location][attribute][name_req][:points]
-        answer.join.to_i
+      game_hash[location][info][name_req][:points]
+        
       end
       
     end
   end
-  answer
+  
   
 end
 
