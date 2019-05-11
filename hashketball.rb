@@ -127,7 +127,7 @@ players_home.each do |name|
   else
     players_away.each do |name|
       if name = name_req
-        return name_req[:points].to_int
+        return name_req[:points][:a.to_i]
       end
     end
   end
