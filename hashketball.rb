@@ -120,9 +120,9 @@ end
 def num_points_scored(name_req)
   hash = game_hash
   
-  hash.map do |location, attribute|
+  hash.each do |location, attribute|
     
-    attribute.map do |info, stat| 
+    attribute.each do |info, stat| 
       
       if stat.include?(name_req) 
         
